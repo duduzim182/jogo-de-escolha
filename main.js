@@ -15,8 +15,8 @@ function escolha(opcao){
     else if (opcao === "bomba"){
          titulo.innerText = " Bomba na China";
         imagem.src = "bomba.png";
-        historia.innerText = "o presidente da china está furioso! E diz “ou você me devolve ou haverá consequências severas.";
-        botoes[0].innerText = "a bomba jogar novamente";
+        historia.innerText = "A Bomba falhou";
+        botoes[0].innerText = " jogar a bomba novamente";
         botoes[0].setAttribute("onclick", "escolha('bomba2')");
         botoes[1].innerText = "deixar para la.";
         botoes[1].setAttribute("onclick", "escolha('deixar')");
@@ -31,6 +31,18 @@ function escolha(opcao){
         titulo.innerText = "trair"
         imagem.src = "paisagrm.png"
         historia.innerText ="o presidente da china está furioso! E diz “ou você me devolve ou haverá consequências severas.!"
+        botoes.forEach(botao => botao.style.display = "none");
+    }
+      else if (opcao === "bomba2"){
+        titulo.innerText = "voce matou todos"
+        imagem.src = "bandeira e paisagem.png"
+        historia.innerText ="Voce matou um monte de pessoas inocentes e começou uma guerra!"
+        botoes.forEach(botao => botao.style.display = "none");
+    }
+          else if (opcao === "deixar"){
+        titulo.innerText = "Voce salvou todos"
+        imagem.src = "presidente.jpg"
+        historia.innerText ="A china se alia a voce de volta e juntos voces tornam o mundo um lugar melhor"
         botoes.forEach(botao => botao.style.display = "none");
     }
 }
